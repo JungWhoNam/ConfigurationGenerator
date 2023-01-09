@@ -29,8 +29,10 @@ namespace ConfigGeneraor
         private void Start()
         {
             string str = "[";
-            for (int i = 0; i < displays.Length; i++) {
-                if (displays[i] == null) {
+            for (int i = 0; i < displays.Length; i++)
+            {
+                if (displays[i] == null)
+                {
                     continue;
                 }
 
@@ -44,7 +46,8 @@ namespace ConfigGeneraor
 
             Debug.Log(str);
 
-            if (saveToFile) {
+            if (saveToFile)
+            {
                 System.IO.File.WriteAllText(Application.dataPath + "/" + fileName, str);
             }
         }
