@@ -1,6 +1,6 @@
 [
 {
-	"hostName": "p00",
+	"hostName": "localhost",
 
 	"topLeft": [0.178950, 0.122950, 1.000000],
 	"botLeft": [0.178950, -0.122950, 1.000000],
@@ -17,7 +17,7 @@
 	"screenHeight": 640
 },
 {
-	"hostName": "p01",
+	"hostName": "localhost",
 
 	"topLeft": [0.178950, 0.122950, 1.000000],
 	"botLeft": [0.178950, -0.122950, 1.000000],
@@ -34,7 +34,7 @@
 	"screenHeight": 1120
 },
 {
-	"hostName": "p02",
+	"hostName": "localhost",
 
 	"topLeft": [0.000000, 0.122950, 1.000000],
 	"botLeft": [0.000000, -0.122950, 1.000000],

@@ -12,11 +12,7 @@ namespace ConfigGeneraor
         Vector3 origin = Vector3.zero;
         Vector3 left = Vector3.left;
         Vector3 right = Vector3.right;
-
-        string fileName = "config/display_settings.json";
-        bool negX = true;
-        bool negY = false;
-        bool negZ = false;
+        bool alignWithMaxZ = false;
 
         public override void OnInspectorGUI()
         {
@@ -25,6 +21,7 @@ namespace ConfigGeneraor
             Config config = (Config)target;
 
             EditorGUILayout.Space(20f);
+            EditorGUILayout.HelpBox("Position Display Containers around y-axis from a position.", MessageType.Info);
             xScale = EditorGUILayout.FloatField("X-Scale of a Display", xScale);
             origin = EditorGUILayout.Vector3Field("Origin", origin);
             left = EditorGUILayout.Vector3Field("From Dir", left);
@@ -35,13 +32,27 @@ namespace ConfigGeneraor
             }
 
             EditorGUILayout.Space(20f);
-            fileName = EditorGUILayout.TextField("File name", fileName);
-            negX = EditorGUILayout.Toggle("Negate x values", negX);
-            negY = EditorGUILayout.Toggle("Negate y values", negY);
-            negZ = EditorGUILayout.Toggle("Negate z values", negZ);
+            EditorGUILayout.HelpBox("Fit the master display to Display(s) under the containers.\n" +
+                "- Updates its screen.height based on its new scale and screen.width.\n" +
+                "- Assume Display(s) are rectangle and thier sizes are equal.\n" +
+                "- Assuem thier y-axes are aligned with world's y-aixs.", MessageType.Info);
+            alignWithMaxZ = EditorGUILayout.Toggle("Set z-position to max", alignWithMaxZ);
+            if (GUILayout.Button("Reset the master display"))
+            {
+                config.ResetMasterDisplay(alignWithMaxZ);
+            }
+
+            EditorGUILayout.Space(20f);
+            EditorGUILayout.HelpBox("Save the configuration to a JSON file.\n" +
+                "- Unity uses a left-handed, Y-Up coordinate system.\n" +
+                "- OSPRay uses a right-handed, Y-Up coordinate system.", MessageType.Info);
+            config.fileName = EditorGUILayout.TextField("File name", config.fileName);
+            config.negX = EditorGUILayout.Toggle("Negate x values", config.negX);
+            config.negY = EditorGUILayout.Toggle("Negate y values", config.negY);
+            config.negZ = EditorGUILayout.Toggle("Negate z values", config.negZ);
             if (GUILayout.Button("Save to the file"))
             {
-                config.SaveToFile(fileName, negX, negY, negZ);
+                config.SaveToFile();
             }
         }
 
