@@ -2,54 +2,62 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// MacBook Pro 16" (4th Generation)
-// https://support.apple.com/kb/SP809?locale=en_US
-// - native - 35.79 X 24.59 (in cm), 3072 x 1920, 226 PPI
-// - use as - 1792 x 1120
-// DELL P2715Q
-// - native - 64.074 x 37.966 (in cm), 3840 x 2160, 163 PPI
-// - use as - 2560 x 1440 
-// For getting helps with computing mullion width and height, see MullionComputer.cs.
 namespace ConfigGeneraor
 {
     public class Config : MonoBehaviour
     {
-        public bool saveToFile = true;
-        public string fileName = "display_settings.json";
+        [Header("Display Settings")]
+        public Display rankZero;
+        public Transform[] displayContainers;
 
         // left-hand (unity), right-hand (ospray)
-        [Space(10)]
-        public bool negX3D = true;
-        public bool negY3D = false;
-        public bool negZ3D = false;
-
-        [Space(10)]
-        public Display[] displays;
-
-        private void Start()
+        public void SaveToFile(string fileName, bool negX3D, bool negY3D, bool negZ3D)
         {
-            string str = "[";
-            for (int i = 0; i < displays.Length; i++)
+            if (string.IsNullOrEmpty(fileName) || string.IsNullOrWhiteSpace(fileName))
             {
-                if (displays[i] == null)
-                {
-                    continue;
-                }
+                Debug.LogWarning("File name is empty.");
+                return;
+            }
 
-                displays[i].gameObject.name = i + ": " + displays[i].hostName;
+            // find all Display(s) under displayContainers.
+            List<Display> displays = new();
+            displays.Add(rankZero);
+            foreach (Transform container in this.displayContainers)
+                displays.AddRange(container.GetComponentsInChildren<Display>());
 
+            string str = "[";
+            for (int i = 0; i < displays.Count; i++)
+            {
                 str += "\n";
                 str += Display.ToJSON(displays[i], negX3D, negY3D, negZ3D);
-                str += i < displays.Length - 1 ? "," : "\n";
+                str += i < displays.Count - 1 ? "," : "\n";
             }
             str += "]";
 
-            Debug.Log(str);
+            System.IO.File.WriteAllText(Application.dataPath + "/" + fileName, str);
 
-            if (saveToFile)
+            Debug.Log("Saved " + fileName + ", which contains " + displays.Count + " display(s) information.");
+        }
+
+        public void PositionContainersAroundYAxis(float scaleX, Vector3 origin, Vector3 fromDir, Vector3 toDir)
+        {
+            if (this.displayContainers == null || this.displayContainers.Length <= 1)
             {
-                System.IO.File.WriteAllText(Application.dataPath + "/" + fileName, str);
+                Debug.LogWarning("There is only one or no displayContainer(s).");
+                return;
             }
+
+            float angleIncAmt = Vector3.Angle(fromDir, toDir) / (this.displayContainers.Length - 1);
+            float distFromOrigin = (scaleX * 0.5f) / Mathf.Tan(Mathf.Deg2Rad * angleIncAmt * 0.5f);
+
+            for (int i = 0; i < this.displayContainers.Length; i++)
+            {
+                Vector3 dir = Quaternion.AngleAxis(angleIncAmt * i, Vector3.up) * fromDir;
+                this.displayContainers[i].transform.position = origin + dir * distFromOrigin;
+                this.displayContainers[i].transform.LookAt(origin + dir * (distFromOrigin + 1f), Vector3.up);
+            }
+
+            Debug.Log("Positioned " + this.displayContainers.Length + " container(s), placed " + distFromOrigin + " from the origin.");
         }
 
     } // class Config
