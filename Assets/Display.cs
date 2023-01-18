@@ -63,6 +63,7 @@ namespace ConfigGeneraor
             str += "\t" + ToJSON(nameof(topLeft), value.topLeft.position * scaleFactor, negX, negY, negZ) + ",\n";
             str += "\t" + ToJSON(nameof(botLeft), value.botLeft.position * scaleFactor, negX, negY, negZ) + ",\n";
             str += "\t" + ToJSON(nameof(botRight), value.botRight.position * scaleFactor, negX, negY, negZ) + ",\n";
+            str += "\t" + ToJSON(nameof(eye), value.eye.position * scaleFactor, negX, negY, negZ) + ",\n";
             str += "\t" + ToJSON(nameof(mullionLeft), value.mullionLeft * scaleFactor) + ",\n";
             str += "\t" + ToJSON(nameof(mullionRight), value.mullionRight * scaleFactor) + ",\n";
             str += "\t" + ToJSON(nameof(mullionTop), value.mullionTop * scaleFactor) + ",\n";
@@ -86,7 +87,7 @@ namespace ConfigGeneraor
         public Transform topLeft;
         public Transform botLeft;
         public Transform botRight;
-
+        public Transform eye;
         public float mullionLeft;
         public float mullionRight;
         public float mullionTop;

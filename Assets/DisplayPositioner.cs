@@ -13,12 +13,23 @@ namespace ConfigGeneraor
         Vector3 left = Vector3.left;
         Vector3 right = Vector3.right;
         bool alignWithMaxZ = false;
+        Vector3 eyePos = Vector3.zero;
+        bool exculdeRank0 = true;
 
         public override void OnInspectorGUI()
         {
             DrawDefaultInspector();
 
             Config config = (Config)target;
+
+            EditorGUILayout.Space(20f);
+            EditorGUILayout.HelpBox("Move the eyes of Display(s) to a specific location.", MessageType.Info);
+            eyePos = EditorGUILayout.Vector3Field("Eye position", eyePos);
+            exculdeRank0 = EditorGUILayout.Toggle("Exclude the master display", exculdeRank0);
+            if (GUILayout.Button("Move the eyes of Display(s)"))
+            {
+                config.SetEyePosition(eyePos, exculdeRank0);
+            }
 
             EditorGUILayout.Space(20f);
             EditorGUILayout.HelpBox("Position Display Containers around y-axis from a position.", MessageType.Info);

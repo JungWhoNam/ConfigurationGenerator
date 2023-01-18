@@ -159,5 +159,26 @@ namespace ConfigGeneraor
             Debug.Log("\tfinished positioning and scaling the master display");
         }
 
+        public void SetEyePosition(Vector3 pos, bool excludeRank0)
+        {
+            // find all Display(s) under displayContainers.
+            List<Display> displays = new();
+            foreach (Transform container in this.displayContainers)
+                displays.AddRange(container.GetComponentsInChildren<Display>());
+
+            if (!excludeRank0)
+                displays.Add(this.masterDisplay);
+
+            Debug.Log("Moving eyes of Display(s)...");
+            Debug.Log("\tgoing through " + displays.Count + " display(s)");
+
+            foreach (Display display in displays)
+            {
+                display.eye.position = pos;
+            }
+
+            Debug.Log("\tfinished positioning the eyes");
+        }
+
     } // class Config
 } // namespace ConfigGeneraor
