@@ -270,7 +270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &44946026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,9 +284,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: config/rattler_planar.json
-  negX: 1
+  negX: 0
   negY: 0
-  negZ: 0
+  negZ: 1
   masterDisplay: {fileID: 125637492}
   displayContainers:
   - {fileID: 1687870651}
@@ -781,7 +781,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &235776850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -795,9 +795,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: config/rattler.json
-  negX: 1
+  negX: 0
   negY: 0
-  negZ: 0
+  negZ: 1
   masterDisplay: {fileID: 1746791770}
   displayContainers:
   - {fileID: 21365609}
@@ -949,9 +949,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: config/display_settings.json
-  negX: 1
+  negX: 0
   negY: 0
-  negZ: 0
+  negZ: 1
   masterDisplay: {fileID: 897190758}
   displayContainers:
   - {fileID: 526519679}
@@ -2565,7 +2565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2114305435073102360, guid: 0df90db0189164c1fb6e2b80d649865f, type: 3}
       propertyPath: m_Name
-      value: r19
+      value: r09
       objectReference: {fileID: 0}
     - target: {fileID: 2114305435073102361, guid: 0df90db0189164c1fb6e2b80d649865f, type: 3}
       propertyPath: m_RootOrder
@@ -2613,7 +2613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2114305435073102362, guid: 0df90db0189164c1fb6e2b80d649865f, type: 3}
       propertyPath: hostName
-      value: r19
+      value: r09
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0df90db0189164c1fb6e2b80d649865f, type: 3}
@@ -3584,9 +3584,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: config/two_displays.json
-  negX: 1
+  negX: 0
   negY: 0
-  negZ: 0
+  negZ: 1
   masterDisplay: {fileID: 8647129170239277309}
   displayContainers:
   - {fileID: 412356337}
@@ -3902,7 +3902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2114305435073102360, guid: 0df90db0189164c1fb6e2b80d649865f, type: 3}
       propertyPath: m_Name
-      value: r19
+      value: r09
       objectReference: {fileID: 0}
     - target: {fileID: 2114305435073102361, guid: 0df90db0189164c1fb6e2b80d649865f, type: 3}
       propertyPath: m_RootOrder
@@ -3950,7 +3950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2114305435073102362, guid: 0df90db0189164c1fb6e2b80d649865f, type: 3}
       propertyPath: hostName
-      value: r19
+      value: r09
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0df90db0189164c1fb6e2b80d649865f, type: 3}
