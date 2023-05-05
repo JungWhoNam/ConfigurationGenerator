@@ -1,13 +1,14 @@
 # Configuration Generator
-> This project is part of a larger project called [Immersive OSPray](../README.md).
+> This Unity project is part of a larger project called [Immersive OSPray](https://github.com/jungwhonam-tacc/Whitepaper).
 
-This project provides a tool to form displays in a spatial layout and save the configuration in a JSON file. The JSON file is imported in our application to configure its virtual cameras (see ...).
-- See `1. Display Configuration JSON File` on the JSON file
-- See `2. Display Configuration Generator` on the Unity tool
+This project provides a tool to form displays in a spatial layout and save the configuration in a JSON file. The JSON file is used in [another application](https://github.com/jungwhonam-tacc/ospray_studio/tree/v0.12.0-alpha.x) to configure its virtual cameras and windows.
+- See [Display Configuration JSON File](#display-configuration-json-file) about the JSON file
+- See [Display Configuration Generator](#display-configuration-generator) about the Unity tool
+- See `Assets/Scenes/SampleScene` for example display configurations
+- See `Assets/config` for example JSON files
 
-# 1. Display Configuration JSON File
-At the start, the application reads a JSON configuration file to set its cameras and arrange windows. 
-Example files can be found `here`. This is a snippet of an example JSON file. 
+# Display Configuration JSON File
+At the start, the application reads a JSON configuration file to set its cameras and arrange windows. This is a snippet of an example JSON file. 
 
 ```
 [
@@ -44,10 +45,10 @@ The JSON configuration file comprises an array of JSON objects. Each object - su
 - ```display``` sets which display to show the window.
 - Four keys that start with ```screen``` set the position and size of a window in screen coordinates.
 
-# 2. Display Configuration Generator
+# Display Configuration Generator
 This Unity project helps create the JSON file by providing a graphical assistant in specifying and arranging displays in a system. For instance, this project allows users to use 3D object manipulation features in Unity Editor to specify the positions of display corners and arrange display objects. Additionally, this project provides features to place these display objects into a spatial layout and scale a master display to fit all other displays. 
 
-> See `Assets/Scenes/SampleScene` for an example scene.
+
 
 ## Specifying a Display
 ![](Images/Config%20Generator%20-%20display.png)
