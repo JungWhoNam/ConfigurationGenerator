@@ -1,7 +1,7 @@
 # Configuration Generator
-> This Unity project is part of a larger project called [Immersive OSPray](https://github.com/jungwhonam-tacc/Whitepaper).
+> This Unity project is part of a larger project called [Immersive OSPray](https://github.com/jungwhonam/ImmersiveOSPRay).
 
-This project provides a tool to form displays in a spatial layout and save the configuration in a JSON file. The JSON file is used in [another application](https://github.com/jungwhonam-tacc/ospray_studio/tree/v0.12.0-alpha.x) to configure its virtual cameras and windows.
+This project provides a tool to form displays in a spatial layout and save the configuration in a JSON file. The JSON file is used in [another application](https://github.com/jungwhonam/ospray_studio/tree/v0.12.0-alpha.x) to configure its virtual cameras and windows.
 - See [Display Configuration JSON File](#display-configuration-json-file) about the JSON file
 - See [Display Configuration Generator](#display-configuration-generator) about the Unity tool
 - See `Assets/Scenes/SampleScene` for example display configurations
