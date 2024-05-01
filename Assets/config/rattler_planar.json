@@ -15,7 +15,12 @@
 	"screenX": 0,
 	"screenY": 0,
 	"screenWidth": 1024,
-	"screenHeight": 295
+	"screenHeight": 295,
+	"decorated": true,
+	"showUI": true,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 },
 {
 	"hostName": "r07",
@@ -33,7 +38,12 @@
 	"screenX": 0,
 	"screenY": 0,
 	"screenWidth": 3840,
-	"screenHeight": 2160
+	"screenHeight": 2160,
+	"decorated": false,
+	"showUI": false,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 },
 {
 	"hostName": "r08",
@@ -51,7 +61,12 @@
 	"screenX": 0,
 	"screenY": 0,
 	"screenWidth": 3840,
-	"screenHeight": 2160
+	"screenHeight": 2160,
+	"decorated": false,
+	"showUI": false,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 },
 {
 	"hostName": "r09",
@@ -69,7 +84,12 @@
 	"screenX": 0,
 	"screenY": 0,
 	"screenWidth": 3840,
-	"screenHeight": 2160
+	"screenHeight": 2160,
+	"decorated": false,
+	"showUI": false,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 },
 {
 	"hostName": "r04",
@@ -87,7 +107,12 @@
 	"screenX": 0,
 	"screenY": 0,
 	"screenWidth": 3840,
-	"screenHeight": 2160
+	"screenHeight": 2160,
+	"decorated": false,
+	"showUI": false,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 },
 {
 	"hostName": "r05",
@@ -105,7 +130,12 @@
 	"screenX": 0,
 	"screenY": 0,
 	"screenWidth": 3840,
-	"screenHeight": 2160
+	"screenHeight": 2160,
+	"decorated": false,
+	"showUI": false,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 },
 {
 	"hostName": "r06",
@@ -123,7 +153,12 @@
 	"screenX": 0,
 	"screenY": 0,
 	"screenWidth": 3840,
-	"screenHeight": 2160
+	"screenHeight": 2160,
+	"decorated": false,
+	"showUI": false,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 },
 {
 	"hostName": "r10",
@@ -141,7 +176,12 @@
 	"screenX": 0,
 	"screenY": 0,
 	"screenWidth": 3840,
-	"screenHeight": 2160
+	"screenHeight": 2160,
+	"decorated": false,
+	"showUI": false,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 },
 {
 	"hostName": "r11",
@@ -159,7 +199,12 @@
 	"screenX": 0,
 	"screenY": 0,
 	"screenWidth": 3840,
-	"screenHeight": 2160
+	"screenHeight": 2160,
+	"decorated": false,
+	"showUI": false,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 },
 {
 	"hostName": "r12",
@@ -177,7 +222,12 @@
 	"screenX": 0,
 	"screenY": 0,
 	"screenWidth": 3840,
-	"screenHeight": 2160
+	"screenHeight": 2160,
+	"decorated": false,
+	"showUI": false,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 },
 {
 	"hostName": "r13",
@@ -195,7 +245,12 @@
 	"screenX": 0,
 	"screenY": 0,
 	"screenWidth": 3840,
-	"screenHeight": 2160
+	"screenHeight": 2160,
+	"decorated": false,
+	"showUI": false,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 },
 {
 	"hostName": "r14",
@@ -213,7 +268,12 @@
 	"screenX": 0,
 	"screenY": 0,
 	"screenWidth": 3840,
-	"screenHeight": 2160
+	"screenHeight": 2160,
+	"decorated": false,
+	"showUI": false,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 },
 {
 	"hostName": "r15",
@@ -231,7 +291,12 @@
 	"screenX": 0,
 	"screenY": 0,
 	"screenWidth": 3840,
-	"screenHeight": 2160
+	"screenHeight": 2160,
+	"decorated": false,
+	"showUI": false,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 },
 {
 	"hostName": "r16",
@@ -249,7 +314,12 @@
 	"screenX": 0,
 	"screenY": 0,
 	"screenWidth": 3840,
-	"screenHeight": 2160
+	"screenHeight": 2160,
+	"decorated": false,
+	"showUI": false,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 },
 {
 	"hostName": "r17",
@@ -267,7 +337,12 @@
 	"screenX": 0,
 	"screenY": 0,
 	"screenWidth": 3840,
-	"screenHeight": 2160
+	"screenHeight": 2160,
+	"decorated": false,
+	"showUI": false,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 },
 {
 	"hostName": "r18",
@@ -285,7 +360,12 @@
 	"screenX": 0,
 	"screenY": 0,
 	"screenWidth": 3840,
-	"screenHeight": 2160
+	"screenHeight": 2160,
+	"decorated": false,
+	"showUI": false,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 },
 {
 	"hostName": "r01",
@@ -303,7 +383,12 @@
 	"screenX": 0,
 	"screenY": 0,
 	"screenWidth": 3840,
-	"screenHeight": 2160
+	"screenHeight": 2160,
+	"decorated": false,
+	"showUI": false,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 },
 {
 	"hostName": "r02",
@@ -321,7 +406,12 @@
 	"screenX": 0,
 	"screenY": 0,
 	"screenWidth": 3840,
-	"screenHeight": 2160
+	"screenHeight": 2160,
+	"decorated": false,
+	"showUI": false,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 },
 {
 	"hostName": "r03",
@@ -339,6 +429,11 @@
 	"screenX": 0,
 	"screenY": 0,
 	"screenWidth": 3840,
-	"screenHeight": 2160
+	"screenHeight": 2160,
+	"decorated": false,
+	"showUI": false,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 }
 ]

@@ -57,7 +57,7 @@ namespace ConfigGeneraor
             // host name
             str += "\n";
             str += "\t" + ToJSON(nameof(hostName), value.hostName) + ",\n";
-            // physical dims
+            // physical properties
             float scaleFactor = 1f;
             str += "\n";
             str += "\t" + ToJSON(nameof(topLeft), value.topLeft.position * scaleFactor, negX, negY, negZ) + ",\n";
@@ -68,13 +68,19 @@ namespace ConfigGeneraor
             str += "\t" + ToJSON(nameof(mullionRight), value.mullionRight * scaleFactor) + ",\n";
             str += "\t" + ToJSON(nameof(mullionTop), value.mullionTop * scaleFactor) + ",\n";
             str += "\t" + ToJSON(nameof(mullionBottom), value.mullionBottom * scaleFactor) + ",\n";
-            // screen dims
+            // screen properties
             str += "\n";
             str += "\t" + ToJSON(nameof(display), value.display) + ",\n";
             str += "\t" + ToJSON("screenX", value.screen.x) + ",\n";
             str += "\t" + ToJSON("screenY", value.screen.y) + ",\n";
             str += "\t" + ToJSON("screenWidth", value.screen.width) + ",\n";
-            str += "\t" + ToJSON("screenHeight", value.screen.height) + "\n";
+            str += "\t" + ToJSON("screenHeight", value.screen.height) + ",\n";
+            str += "\t" + ToJSON(nameof(decorated), value.decorated) + ",\n";
+            str += "\t" + ToJSON(nameof(showUI), value.showUI) + ",\n";
+            str += "\t" + ToJSON(nameof(scaleRes), value.scaleRes) + ",\n";
+            str += "\t" + ToJSON(nameof(scaleResNav), value.scaleResNav) + ",\n";
+            str += "\t" + ToJSON(nameof(lockAspectRatio), value.lockAspectRatio) + "\n";
+
 
             str += "}";
 
@@ -96,6 +102,11 @@ namespace ConfigGeneraor
         [Header("Screen Properties")]
         public int display;
         public RectInt screen;
+        public bool decorated = false;
+        public bool showUI = false;
+        public float scaleRes = 0.5f;
+        public float scaleResNav = 0.25f;
+        public bool lockAspectRatio = true;
 
     } // class Display
 } // namespace ConfigGeneraor

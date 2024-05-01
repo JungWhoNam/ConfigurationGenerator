@@ -15,7 +15,12 @@
 	"screenX": 0,
 	"screenY": 0,
 	"screenWidth": 1024,
-	"screenHeight": 640
+	"screenHeight": 640,
+	"decorated": true,
+	"showUI": true,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 },
 {
 	"hostName": "localhost",
@@ -33,7 +38,12 @@
 	"screenX": 0,
 	"screenY": 0,
 	"screenWidth": 896,
-	"screenHeight": 1120
+	"screenHeight": 1120,
+	"decorated": false,
+	"showUI": false,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 },
 {
 	"hostName": "localhost",
@@ -51,6 +61,11 @@
 	"screenX": 896,
 	"screenY": 0,
 	"screenWidth": 896,
-	"screenHeight": 1120
+	"screenHeight": 1120,
+	"decorated": false,
+	"showUI": false,
+	"scaleRes": 0.500000,
+	"scaleResNav": 0.250000,
+	"lockAspectRatio": true
 }
 ]
