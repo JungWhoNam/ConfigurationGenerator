@@ -1,5 +1,5 @@
 # Display Configuration File Generator
-> This Unity project is part of a larger project called [Immersive OSPray](https://github.com/jungwhonam-tacc/Whitepaper).
+> This Unity project is part of a larger project called [Immersive OSPRay Studio](https://github.com/jungwhonam-tacc/Whitepaper).
 
 ## Overview
 This Unity project provides features to form displays in a spatial layout and save the configuration in a JSON file. The JSON file is used in [another application](https://github.com/JungWhoNam/ospray_studio/tree/jungwho.nam-feature-immersive-latest) to configure its virtual cameras and windows.
